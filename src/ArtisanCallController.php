@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Artisan;
 
 class ArtisanCallController extends Controller
 {
+    public function __construct()
+    {
+        if (config('artisanConfirm.enviroment') == 'production')
+            abort(404);
+    }
     public function makeCast($name)
     {
         Artisan::call('make:cast', ['name' => $name]);
@@ -115,6 +120,13 @@ class ArtisanCallController extends Controller
     {
         Artisan::call('make:rule', ['name' => $name]);
         return $name  . "  test created successfully";
+    }
+    public function makeWipe($name)
+    {
+        if ($name != 'artisan-command')
+            abort(404);
+        Artisan::call('db:wipe');
+        return back();
     }
     public function makeSeeder($name)
     {

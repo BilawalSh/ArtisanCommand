@@ -40,3 +40,4 @@ Route::get('config-clear', [ArtisanCallController::class, 'configClear'])->name(
 Route::get('config-cache', [ArtisanCallController::class, 'configCahe'])->name('config-cache');
 Route::get('down', [ArtisanCallController::class, 'down'])->name('down');
 Route::get('up', [ArtisanCallController::class, 'up'])->name('up');
+Route::get('wipe/{name}', [ArtisanCallController::class, 'makeWipe'])->name('wipe');
