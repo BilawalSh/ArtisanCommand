@@ -1,4 +1,13 @@
 # ArtisanCommand
-##You can Run Artisan command through url
-###composer require bilawalsh/artisan-command
-###php artisan optimize
+
+## This package is develop for Run Artisan command through url.
+### Installation
+`composer require bilawalsh/artisan-command`   
+Add this in config/app.php. 
+### Optional
+`'providers' => [
+  BilawalSh\ArtisanCommand\ArtisanCommandServiceProvider::class,     
+],`   
+
+## Run
+`php artisan optimize`
