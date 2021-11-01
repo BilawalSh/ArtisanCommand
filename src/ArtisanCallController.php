@@ -10,7 +10,7 @@ class ArtisanCallController extends Controller
 {
     public function __construct()
     {
-        if (config('artisanConfirm.enviroment') == 'production')
+        if (config('artisanCommand.enviroment') == 'production')
             abort(404);
     }
     public function makeCast($name)
