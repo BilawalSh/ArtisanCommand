@@ -13,7 +13,7 @@ class ArtisanCommandServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(__DIR__ . '/config/artisanCommand.php', 'artisanCommand');
     }
 
     /**
@@ -27,6 +27,5 @@ class ArtisanCommandServiceProvider extends ServiceProvider
             __DIR__ . '/config/artisanCommand.php' => config_path('artisanCommand.php'),
         ]);
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        $this->mergeConfigFrom(__DIR__ . '/config/artisanCommand.php', 'artisanCommand');
     }
 }
