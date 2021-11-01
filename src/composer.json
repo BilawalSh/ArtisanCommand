@@ -1,0 +1,36 @@
+{
+    "name": "ilawalsh/artisan-command",
+    "description": "Run Artisan Command On Live Server",
+    "keywords": [
+        "Artisan",
+        "laravel",
+        "ArtisanCommand",
+        "Live",
+        "Server"
+    ],
+    "homepage": "https://github.com/BilawalSh/ArtisanCommand",
+    "type": "laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BilawalBasheer",
+            "email": "bilawalb92@gmail.com",
+            "homepage": "https://inlaravel.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "BilawalSh\\ArtisanCommand\\": "src"
+        }
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "BilawalSh\\ArtisanCommand\\ArtisanCommandServiceProvider"
+            ]
+        }
+    }
+}
